@@ -1,0 +1,74 @@
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  background-image: url(./portfolio.webp);
+  background-size:contain;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+
+}
+
+.profile img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #222;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px ;
+  border-radius: 8px;
+}
+
+
+h2 {
+  margin-top: 30px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+
+p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 10px;
+  font-size: 1rem;
+  color: #666;
+}
