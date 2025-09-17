@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Raghav Yadav</h1>
+
+  <ul id="R">
+    <li>Home</li>
+  </ul>
+
+  <script>
+    let changeColor=document.querySelector('h1');
+    changeColor.style.color="blue";
+
+  let ul=document.createElement('ul');
+  // let li1=document.createElement('li');
+  // let li2=document.createElement('li');
+  // let li3=document.createElement('li');
+  
+    // li1.textContent = "About";
+    // li2.textContent = "Services";
+    // li3.textContent = "Contact";
+
+    ul.innerHTML="<li>About</li><li>Services</li><li>Contact</li>";
+      document.body.appendChild(ul);
+      
+      let del=document.querySelector('#R');
+      del.removeChild(del.lastElementChild);
+    
+
+  </script>
+</body>
+</html>
