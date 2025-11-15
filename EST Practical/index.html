@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form</title>
+</head>
+<body>
+
+    <h2>Create Post</h2>
+
+    <form id="postForm">
+        <label>Title:</label><br>
+        <input type="text" id="title" required><br><br>
+
+        <label>Body:</label><br>
+        <textarea id="body" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="successMsg" style="color: green; display: none;">
+        Post submitted successfully!
+    </p>
+
+    <script>
+        const form = document.getElementById("postForm");
+        const successMsg = document.getElementById("successMsg");
+
+        form.addEventListener("submit", async function(e) {
+            e.preventDefault();
+
+            const title = document.getElementById("title").value;
+            const body = document.getElementById("body").value;
+
+            const response = await fetch("/posts", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ title, body })
+            });
+
+            if (response.ok) {
+                successMsg.style.display = "block";
+                form.reset();
+            }
+        });
+    </script>
+
+</body>
+</html>
